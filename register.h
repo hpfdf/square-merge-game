@@ -187,7 +187,7 @@ class Register: public Base {
   static std::string name_;
 };
 
-template<class Base>
+template <class Base>
 typename RegisterBase<Base>::RegisterTable RegisterBase<Base>::creators_;
 
 template <class Child, class Base>
