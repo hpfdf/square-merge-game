@@ -2,7 +2,7 @@
 //
 // Brief: Play the 2048-like game in a linux terminal.
 //
-// Author:  Pufan He <hpfdf@126.com>
+// Author: Pufan He <hpfdf@126.com>
 //
 // Version: 2014/08/19
 
