@@ -11,7 +11,7 @@
 // Usage: Write your own Base or Child classes that extend RegisterBase or
 //        Register to enable the create-by-name feature.
 //
-//        class Base : RegisterBase<Base>
+//        class Base: RegisterBase<Base>
 //
 //          static Base* Create(const string& name);
 //          >> Create a new registered child class of Base. If name is empty,
@@ -29,14 +29,14 @@
 //          >> Remove a registered name, so Base cannot create the associated
 //             child with name. Return true if a child is removed.
 //
-//        class Child : Register<Child, Base, Name>
+//        class Child: Register<Child, Base, Name>
 //
 //          Base's interface;
 //          >> Register<Child, Base, Name> itself extends Base, and thus
 //             Base::Create(Name) is able to correctly return the Child as a
 //             Base*, because Child extends Register<Child, Base, Name>.
 //             Specially, when Name is empty, i.e.,
-//                 class Child : Register<Child, Base>
+//                 class Child: Register<Child, Base>
 //             The Base class does not register the Child class for create.
 //             However, user may use SetName() later to enable the register.
 //
@@ -53,12 +53,12 @@
 //
 //         #include "register.h"
 //
-//         class Fruit : RegisterBase<Fruit> {...};
-//         class Apple : Register<Apple, Fruit, "Apple"> {...};
-//         class Banana : Register<Banana, Fruit, "Banana"> {...};
+//         class Fruit: RegisterBase<Fruit> {...};
+//         class Apple: Register<Apple, Fruit, "Apple"> {...};
+//         class Banana: Register<Banana, Fruit, "Banana"> {...};
 //
 //         template <int i>
-//         class FruitInBox : Register<FruitInBox<i>, Fruit> {...};
+//         class FruitInBox: Register<FruitInBox<i>, Fruit> {...};
 //
 //         (usages:)
 //
